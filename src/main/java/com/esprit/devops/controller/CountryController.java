@@ -11,7 +11,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
 
-@RestController("/countries")
+@RestController
+@RequestMapping("/countries")
 @AllArgsConstructor
 public class CountryController {
 
