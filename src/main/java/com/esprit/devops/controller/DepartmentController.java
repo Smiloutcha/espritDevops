@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
 
-@Service
+@RestController
+@RequestMapping("/departments")
 @AllArgsConstructor
 public class DepartmentController {
 
@@ -21,7 +22,7 @@ public class DepartmentController {
         return new ResponseEntity<>(departmentService.save(department), HttpStatus.OK);
     }
 
-    @GetMapping("/findById/{id}")
+    @GetMapping("/idDepartment/{id}")
     private ResponseEntity<Department> findById(@PathVariable("id") String id) {
         return new ResponseEntity<>(departmentService.findById(id), HttpStatus.OK);
     }
