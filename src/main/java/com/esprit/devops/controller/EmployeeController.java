@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
 
-@RestController("/employees")
+@RestController
+@RequestMapping("/employees")
 @AllArgsConstructor
 public class EmployeeController {
 
